@@ -6,7 +6,6 @@ import axios from 'axios';
 
 import { setToast } from '../../../redux/actions/toastActions';
 
-//import LoginPageOrAdminPage from './LoginPageOrAdminPage';
 import Header from '../../common/Header';
 import Footer from '../../common/Footer';
 import If from '../../common/If';
