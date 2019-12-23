@@ -9,6 +9,14 @@ const reducers = combineReducers({
 
 });
 
-const devTools = window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__();
+/*let devTools;
 
-export default createStore(reducers, compose(applyMiddleware(thunk), devTools));
+if (process.browser) {
+    // client-side-only code
+    devTools = window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__();
+}*/
+
+export default (initialState, options) => {
+    return createStore(reducers, applyMiddleware(thunk));
+}
+//export default createStore(reducers, compose(applyMiddleware(thunk), devTools));

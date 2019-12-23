@@ -1,10 +1,10 @@
 import React from 'react';
-//import { bindActionCreators } from 'redux';
-//import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
+import { connect } from 'react-redux';
 //import Router from 'next/router';
 import axios from 'axios';
 
-//import { setToast } from '../../../redux/actions/toastActions';
+import { setToast } from '../../../redux/actions/toastActions';
 
 //import LoginPageOrAdminPage from './LoginPageOrAdminPage';
 import Header from '../../common/Header';
@@ -12,7 +12,7 @@ import Footer from '../../common/Footer';
 import If from '../../common/If';
 import HomeAdmin from '../HomeAdmin';
 
-export default class LoginPage extends React.Component {
+class LoginPage extends React.Component {
 
     constructor(props) {
         super(props);
@@ -89,9 +89,9 @@ export default class LoginPage extends React.Component {
         } catch (error) {
             console.error(error);
 
-            //error.response.data.errors.forEach( (message) => {
-                //this.props.setToast({ messages: [{ title: 'Erro', text: message, color: 'red' }] });
-            //});
+            error.response.data.errors.forEach( (message) => {
+                this.props.setToast({ messages: [{ title: 'Erro', text: message, color: 'red' }] });
+            });
         }
     }
 
@@ -238,8 +238,7 @@ export default class LoginPage extends React.Component {
 }
 
 /////////////////////////////////////
-/*
+
 const mapDispatchToProps = dispatch => bindActionCreators({ setToast }, dispatch);
 
 export default connect(null, mapDispatchToProps)(LoginPage);
-*/

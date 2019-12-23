@@ -2,8 +2,6 @@ import Document, { Head, Main, NextScript } from 'next/document';
 // Import styled components ServerStyleSheet
 import { ServerStyleSheet } from 'styled-components';
 
-import GlobalStyles from './_globalStyles';
-
 export default class MyDocument extends Document {
 
     static getInitialProps({ renderPage }) {
@@ -49,7 +47,6 @@ export default class MyDocument extends Document {
                     ></script>
                 </Head>
                 <body>
-                    <GlobalStyles />
                     <Main />
                     <NextScript />
                 </body>
