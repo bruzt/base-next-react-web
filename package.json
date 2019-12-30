@@ -2,11 +2,11 @@
   "name": "base-next-react-web",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
-    "start": "next start ./src",
-    "dev": "next ./src",
-    "build": "next build ./src"
+    "start": "NODE_ENV=production node server.js",
+    "dev": "node server.js",
+    "build": "next build"
   },
   "keywords": [],
   "author": "",

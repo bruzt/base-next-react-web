@@ -11,7 +11,7 @@ import Toast from '../components/common/Toast';
 
 class MyApp extends App {
 
-    static async getInitialProps({Component, ctx}) {
+    static async getInitialProps({ Component, ctx }) {
 
         // we can dispatch from here too
         //ctx.store.dispatch({type: 'FOO', payload: 'foo'});
@@ -23,7 +23,7 @@ class MyApp extends App {
 
     render() {
 
-        const {Component, pageProps, store} = this.props;
+        const { Component, pageProps, store } = this.props;
 
         return (
             <Provider store={store}>
